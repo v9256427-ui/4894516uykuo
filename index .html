@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Анкета пользователя </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Добро пожаловать в Анкету пользователя</h1>
+
+    <!-- Страница 1 -->
+    <form id="page1" class="form-page active">
+      <label>Фамилия и имя:</label>
+      <input type="text" name="fullname" required><br>
+
+      <label>Возраст:</label>
+      <input type="number" name="age" required><br>
+
+      <label>Пол:</label>
+      <div class="gender">
+     <label><input type="radio" name="gender" value="Мужской"> Мужской</label>
+      <label><input type="radio" name="gender" value="Женский"> Женский</label>
+      </div>
+
+      <label>Электронная почта:</label>
+      <input type="email" name="email" required><br>
+
+      <button type="button" onclick="nextPage()">Далее</button>
+    </form>
+
+    <!-- Страница 2 -->
+    <form id="page2" class="form-page">
+      <label>Любимые хобби:</label>
+      <input type="text" name="hobby" placeholder="Рисование, спорт..."><br>
+
+      <label>Социальные сети: <input type="text" name="social"></label>
+
+      <label>Любимая музыка / фильм / книга:</label>
+      <input type="text" name="favorites"><br>
+
+     <label>Профессия / специальность: <input type="text" name="profession"></label>
+
+
+      <label>Страна / город проживания:</label>
+      <input type="text" name="city"><br>
+
+      <label>Номер телефона:</label>
+      <input type="tel" name="phone" placeholder="+7 (___) ___-__-__"><br>
+
+      <button type="button" onclick="prevPage()">Назад</button>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
